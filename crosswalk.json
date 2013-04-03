@@ -1,0 +1,99 @@
+{
+	"localpath": "D:\\Data\\SLM\\Lanier_20120510\\VectorData",
+	"geodatabases": [
+        {"name": "Final_Survey.mdb",
+        "tables": [
+                {"name": "Lake_Lanier_Surface_single", "new_table": "Impoundment", "fields": [
+                {"name": "Labels", "new_field": "SDSFEATURENAME"}
+            ]},
+            {"name": "Lanier_Survey_Monuments", "new_table": "ControlMonumentPoint", "fields": [
+                {"name": "Northing_Nad83", "new_field": "YLOCATION"},
+                {"name": "Easting_Nad83", "new_field": "XLOCATION"},
+                {"name": "Description", "new_field": "SDSFEATURENAME"}
+            ]},
+            {"name": "Lanier_Boundary_Line", "new_table": "NatResAcquisitionBoundary_line", "fields": [
+                {"name": "Quadrant_Bearing", "new_field": "SDSFEATURENAME"},
+                {"name": "Private_Survey", "new_field": "PRIVATESURVEY"},
+                {"name": "Reference_Sheet", "new_field": "REFERENCESHEETIDFK"},
+                {"name": "Distance", "new_field": "DISTANCE"}
+            ], "defaults": [
+                    {"field": "DISTANCEUOM", "default": "foot"}
+            ]}
+        ]},
+		{"name": "LanierPermits.mdb",
+		"tables": [
+			{"name": "Docks\\DockDrawing", "new_table": "DocksAndWharfs_area", "fields": [
+				{"name": "OBJECTID", "new_field": "PERMITIDFK"},
+				{"name": "Notes", "new_field": "SDSFEATUREDESCRIPTION"},
+				{"name": "Updated", "new_field": "LASTUPDATE"},
+				{"name": "Type", "new_field": "ACCESSTYPE"},
+				{"name": "Walkway", "new_field": "WALKWAYDESCRIPTION"},
+				{"name": "Label", "new_field": "SDSFEATURENAME"}
+			]},
+			{"name": "Docks\\DockLocations", "new_table": "DocksAndWharfs_pt", "fields": [
+				{"name": "PermitNum", "new_field": "PERMITIDFK"},
+				{"name": "Notes", "new_field": "SDSFEATUREDESCRIPTION"},
+				{"name": "Date_Colle", "new_field": "LASTUPDATE"}
+			]},
+			{"name": "Docks\\Measurement", "new_table": "DockMeasurement", "fields": []},
+			{"name": "LandBased\\Dredging", "new_table": "DredgingEvent", "fields": [
+				{"name": "Notes", "new_field": "SDSFEATURENAME"}
+			]},
+			{"name": "LandBased\\Path", "new_table": "Pathway", "fields": [
+				{"name": "note_", "new_field": "SDSFEATURENAME"},
+				{"name": "GPS_Date", "new_field": "LASTUPDATE"}
+			]},
+			{"name": "LandBased\\Pathway", "new_table": "Pathway", "fields": [
+				{"name": "PermitNum", "new_field": "PERMITIDFK"},
+				{"name": "Notes", "new_field": "SDSFEATUREDESCRIPTION"},
+				{"name": "Type", "new_field": "PATHWAYTYPE"}
+			]},
+			{"name": "LandBased\\RipRap", "new_table": "Pathway", "fields": []},
+			{"name": "LandBased\\VegMod", "new_table": "VegMod", "fields": [
+				{"name": "PermitNum", "new_field": "PERMITIDFK"},
+				{"name": "Notes", "new_field": "SDSFEATUREDESCRIPTION"}
+			]},
+			{"name": "TimberTrespass\\CutArea", "new_table": "TimberTrespass_area", "fields": [
+				{"name": "note_", "new_field": "SDSFEATUREDESCRIPTION"},
+				{"name": "GPS_Date", "new_field": "DATECOLLECTED"},
+				{"name": "Permit_Num", "new_field": "PERMITIDFK"}
+			]},
+			{"name": "TimberTrespass\\PointData", "new_table": "TimberTrespass_pt", "fields": [
+				{"name": "Type", "new_field": "TIMBERTYPE"},
+				{"name": "point_type", "new_field": "COLLECTIONTYPE"},
+				{"name": "Notes", "new_field": "SDSFEATUREDESCRIPTION"}
+			]},
+			{"name": "TimberTrespass\\ReplantingSites", "new_table": "FloraPlantingOrSeeding", "fields": [
+				{"name": "Common", "new_field": "TIMBERTYPE"},
+				{"name": "Notes", "new_field": "SDSFEATUREDESCRIPTION"},
+				{"name": "Species", "new_field": "SPECIES"}
+			]}
+		]},
+		{"name": "shoreline_zoning.mdb",
+		"tables": [
+			{"name": "shoreline_zoning", "new_table": "ShorelineManagementZone", "fields": [
+				{"name": "Labels", "new_field": "SDSFEATURENAME"},
+				{"name": "Notes", "new_field": "SDSFEATUREDESCRIPTION"},
+				{"name": "Type", "new_field": "USETYPE"},
+				{"name": "SAZONETYPE", "new_field": "ZONECLASSIFICATION"},
+				{"name": "Address", "new_field": "ADDRESS"},
+				{"name": "City", "new_field": "CITY"},
+				{"name": "State", "new_field": "STATE"},
+				{"name": "Zip", "new_field": "ZIP"},
+				{"name": "ANRMS", "new_field": "ANRMS"},
+				{"name": "AccessConfig", "new_field": "ACCESSCONFIG"},
+				{"name": "OperatedBy", "new_field": "OPERATEDBY"},
+				{"name": "AccessConfig", "new_field": "ACCESSCONFIG"},
+				{"name": "Agency", "new_field": "AGENCY"}
+			]},
+			{"name": "allocation_signs", "new_table": "ShorelineAllocationSigns", "fields": [
+				{"name": "Comments", "new_field": "SDSFEATUREDESCRIPTION"},
+				{"name": "Last_Updat", "new_field": "LASTUPDATE"},
+				{"name": "Date_", "new_field": "DATECOLLECTED"},
+				{"name": "Left_Side", "new_field": "LEFTSIDE"},
+				{"name": "Right_Side", "new_field": "RIGHTSIDE"},
+				{"name": "Replace", "new_field": "REPLACE"}
+			]}
+		]}
+	]
+}
